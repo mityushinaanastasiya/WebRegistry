@@ -1,0 +1,41 @@
+.shadow-doctor {
+    box-shadow: none;
+}
+
+.shadow-doctor:hover {
+    box-shadow: 0 .6rem .9rem rgba(0,0,0,.075);
+}
+.navbar {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;   
+}
+.padding-doctor {
+    padding-top: 10px !important;
+}
+.tabel-center {
+    text-align: center;
+}
+
+.tabel-data-row {
+    background-color: #aeddff;
+    font-weight: bold;
+}
+.tabel-appointment {
+    border-top: 1px solid #007bff;
+    padding: 7px;
+    margin: 5px;
+}
+
+.text-black {
+    color: black !important;
+}
+.tabel-padding th,.tabel-padding td{
+    padding: .4rem !important;
+}
+.padding-d {
+    padding: .3rem !important;
+}
+
+.msgClass {
+ color: red;
+}
