@@ -9,220 +9,17 @@
         crossorigin="anonymous">
 </head>
 
-<body onload="LoadDoctors();GetCurrentUser();">
+<body onload="GetCurrentUser();">
     <div class="container">
         <nav class="navbar navbar-light" style="background-color: #aeddff;">
-            <a class="navbar-brand">Электронная регистратура</a>
+            <a class="navbar-brand">
+                <img src="https://png.icons8.com/wired/100/000000/hospital.png" width="40px" height="40px">Электронная регистратура</a>
             <form class="form-inline">
                 <div id="login">
                 </div>
             </form>
         </nav>
         <div id="doctors">
-        </div>
-        <div class="row padding-doctor">
-            <div class="card border-primary mb-3 shadow-doctor" style="width: 100%;">
-                <div class="card-header">Окулист</div>
-                <div class="card-body text-black">
-                    <h5 class="card-title">Иванов Иван Иваныч</h5>
-                    <div class="d-flex bd-highlight">
-                        <div class="p-2 flex-grow-1 bd-highlight">
-                            <p class="card-text">Больница: 3 Гор. Больница</p>
-                        </div>
-                        <div class="p-2 bd-highlight">
-                            <button type="button" class="btn btn-outline-info" onclick="LoadAppointment(1);">Посмотреть расписание</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabel-appointment" id="t-appointment">
-                    <div class="table-responsive-xl">
-                        <table class="table tabel-center">
-                            <tr class="tabel-data-row">
-                                <td scope="col">
-                                    Пн
-                                    <br> 01 мая
-                                </td>
-                                <td scope="col">
-                                    Вт
-                                    <br> 02 мая
-                                </td>
-                                <td scope="col">
-                                    Ср
-                                    <br> 03 мая
-                                </td>
-                                <td scope="col">
-                                    Чт
-                                    <br> 04 мая
-                                </td>
-                                <td scope="col">
-                                    Пт
-                                    <br> 05 мая
-                                </td>
-                                <td scope="col">
-                                    Сб
-                                    <br> 06 мая
-                                </td>
-                                <td scope="col">
-                                    Вс
-                                    <br> 07 мая
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target=".bd-example-modal-lg">09:00 - 12:00
-                                        <br> Свободно:
-                                        <span class="badge badge-light">4</span>
-                                    </button>
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                            </tr>
-                            <tr class="tabel-data-row">
-                                <td scope="col">
-                                    Пн
-                                    <br> 08 мая
-                                </td>
-                                <td scope="col">
-                                    Вт
-                                    <br> 09 мая
-                                </td>
-                                <td scope="col">
-                                    Ср
-                                    <br> 10 мая
-                                </td>
-                                <td scope="col">
-                                    Чт
-                                    <br> 11 мая
-                                </td>
-                                <td scope="col">
-                                    Пт
-                                    <br> 12 мая
-                                </td>
-                                <td scope="col">
-                                    Сб
-                                    <br> 13 мая
-                                </td>
-                                <td scope="col">
-                                    Вс
-                                    <br> 14 мая
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                            </tr>
-                            <tr class="tabel-data-row">
-                                <td scope="col">
-                                    Пн
-                                    <br> 08 мая
-                                </td>
-                                <td scope="col">
-                                    Вт
-                                    <br> 09 мая
-                                </td>
-                                <td scope="col">
-                                    Ср
-                                    <br> 10 мая
-                                </td>
-                                <td scope="col">
-                                    Чт
-                                    <br> 11 мая
-                                </td>
-                                <td scope="col">
-                                    Пт
-                                    <br> 12 мая
-                                </td>
-                                <td scope="col">
-                                    Сб
-                                    <br> 13 мая
-                                </td>
-                                <td scope="col">
-                                    Вс
-                                    <br> 14 мая
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                                <td>
-                                    09:00 - 12:00
-                                    <br> Свободно: 4
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -235,139 +32,10 @@
                     </div>
                     <div class="modal-body">
                         <div class="tabel-appointment-time" id="t-appointment-time">
-                            <table class="table tabel-center tabel-padding">
-                                <thead>
-                                    <tr>
-                                        <th class="table-info" width="10%" scope="col">Часы
-                                            <br>приёма</th>
-                                        <th class="table-success" width="90%" scope="col" colspan="4">Пн
-                                            <br>1 Мая
-                                            <br>12:00 - 16:00</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">10:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>10:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>10:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">10:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>10:45</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">11:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">11:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">11:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>11:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>11:45</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">12:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>12:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>12:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>12:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">12:45</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">13:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>13:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>13:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>13:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">13:45</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">14:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>14:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>14:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>14:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">14:45</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">15:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>15:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>15:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>15:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">15:45</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">16:00</th>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-block" disabled>16:00</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>16:15</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-block" disabled>16:30</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-success btn-block active">16:45</button>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <div class="buttom-edit d-flex justify-content-between" id="edit-buttoms">
-                            <div class="dropdown">
-                                <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Редактирование записей
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <button class="dropdown-item" type="button">Добавить</button>
-                                    <button class="dropdown-item" type="button">Удалить</button>
-                                </div>
-                            </div>
                         </div>
                         <div id="msgAdd">
                         </div>
@@ -376,9 +44,8 @@
             </div>
         </div>
 
-        <!-- Modal -->
         <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Регистрация нового пользователя</h5>
@@ -390,24 +57,24 @@
                         <form>
                             <div class="msgClass">
                                 <div id="msg"></div>
-                                <ul id="formError"></ul>
+                                <div id="formError"></div>
                             </div>
                             <div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email: </label>
-                                    <input class="form-control" type="text" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input class="form-control" type="text" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Введите Email">
                                 </div>
                             </div>
                             <div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Пароль: </label>
-                                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
+                                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Пароль">
                                 </div>
                             </div>
                             <div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Подтверждение пароля: </label>
-                                    <input type="password" class="form-control" id="PasswordConfirm" name="PasswordConfirm" placeholder="Password">
+                                    <input type="password" class="form-control" id="PasswordConfirm" name="PasswordConfirm" placeholder="Повторите пароль">
                                 </div>
                             </div>
                         </form>
@@ -419,9 +86,9 @@
                 </div>
             </div>
         </div>
-
+        <!--Модальное окно входа-->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Вход для зарегистрированных пользователей</h5>
@@ -433,17 +100,19 @@
                         <form>
                             <div class="msgClass">
                                 <div id="msgLogin"></div>
-                                <ul id="formErrorLogin"></ul>
+                                <div id="formErrorLogin"></div>
                             </div>
                             <div>
-                                <label for="">Email: </label>
-                                <br />
-                                <input type="text" id="EmailLogin" name="EmailLogin">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email: </label>
+                                    <input class="form-control" type="text" id="EmailLogin" name="EmailLogin" aria-describedby="emailHelp" placeholder="Введите email">
+                                </div>
                             </div>
                             <div>
-                                <label for="">Пароль: </label>
-                                <br />
-                                <input type="password" id="PasswordLogin" name="PasswordLogin">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Пароль: </label>
+                                    <input type="password" class="form-control" id="PasswordLogin" name="PasswordLogin" placeholder="Пороль">
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -451,6 +120,48 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                         <button type="button" id="loginBtn" class="btn btn-primary">Войти</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userAppointmentModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="userAppointmentModal" tabindex="-1" role="dialog" aria-labelledby="userAppointmentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userAppointmentModalLabel">Мои записи</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="loadUserAppointment">
+                        <div class="row row-user-appointment" style="font-weight:bold">
+                            <div class="col">
+                                <img src="https://png.icons8.com/metro/96/000000/today.png" width="22px" height="22px">1 Июля
+                            </div>
+                            <div class="col">
+                                <img src="https://png.icons8.com/ios/50/000000/medical-doctor.png" width="22px" height="22px">Окулист
+                            </div>
+                            <div class="col-5">
+                                <h5>Иванов Иван Иванович</h5>
+                            </div>
+                            <div class="col">
+                                <img src="https://png.icons8.com/ios/50/000000/watch.png" width="22px" height="22px">15:30
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>

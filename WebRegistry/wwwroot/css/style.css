@@ -39,3 +39,12 @@
 .msgClass {
  color: red;
 }
+.mar {
+    padding-left:  1em!important;
+}
+.row-user-appointment {
+    border: 2px solid #4893e2;
+    padding: .3em;
+    margin: .3em;
+    border-radius: 10px;
+}

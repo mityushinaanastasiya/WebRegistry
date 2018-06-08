@@ -7,7 +7,7 @@ namespace WebRegistry.Models
     {
         public int AppointmentId { get; set; }
         public int DoctorId { get; set; }
-        public int? PatientId { get; set; }
+        public string PatientId { get; set; }
         public int DaysOfWeekId { get; set; }
         public DateTime DataTime { get; set; }
 

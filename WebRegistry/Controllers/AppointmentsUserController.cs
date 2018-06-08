@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,26 +9,25 @@ using WebRegistry.Models;
 
 namespace WebRegistry.Controllers
 {
-    [Authorize(Roles = "admin")]
     [Produces("application/json")]
-    [Route("api/Appointments")]
-    public class AppointmentsController : Controller
+    [Route("api/AppointmentsUser")]
+    public class AppointmentsUserController : Controller
     {
         private readonly ElectronicRegistryDataBaseContext _context;
 
-        public AppointmentsController(ElectronicRegistryDataBaseContext context)
+        public AppointmentsUserController(ElectronicRegistryDataBaseContext context)
         {
             _context = context;
         }
 
-        // GET: api/Appointments
+        // GET: api/AppointmentsUser
         [HttpGet]
         public IEnumerable<Appointment> GetAppointment()
         {
             return _context.Appointment;
         }
 
-        // GET: api/Appointments/5
+        // GET: api/AppointmentsUser/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAppointment([FromRoute] int id)
         {
@@ -48,7 +46,7 @@ namespace WebRegistry.Controllers
             return Ok(appointment);
         }
 
-        // PUT: api/Appointments/5
+        // PUT: api/AppointmentsUser/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAppointment([FromRoute] int id, [FromBody] Appointment appointment)
         {
@@ -83,9 +81,8 @@ namespace WebRegistry.Controllers
             return NoContent();
         }
 
-        // POST: api/Appointments
+        // POST: api/AppointmentsUser
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> PostAppointment([FromBody] Appointment appointment)
         {
             if (!ModelState.IsValid)
@@ -99,9 +96,8 @@ namespace WebRegistry.Controllers
             return CreatedAtAction("GetAppointment", new { id = appointment.AppointmentId }, appointment);
         }
 
-        // DELETE: api/Appointments/5
+        // DELETE: api/AppointmentsUser/5
         [HttpDelete("{id}")]
-        [Authorize]
         public async Task<IActionResult> DeleteAppointment([FromRoute] int id)
         {
             if (!ModelState.IsValid)
